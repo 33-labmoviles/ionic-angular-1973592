@@ -13,5 +13,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list>
+    <ion-item *ngFor="let alumno of alumnos " routerLink="/alumno-detalle">
+      <ion-img src="assets/imagenes/fcfm.png" alt="" width="70" height="70"></ion-img>
+      <ion-label>{{alumno.nombre}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
