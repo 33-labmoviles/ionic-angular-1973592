@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-
+/* eslint-disable @typescript-eslint/no-inferrable-types */
+/* eslint-disable @typescript-eslint/quotes */
+/* eslint-disable @typescript-eslint/member-ordering */
+/* eslint-disable max-len */
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -64,7 +68,21 @@ alumnos=[
   apellido:"Garza",
   matricula:"555"
 },
-]
+];
+@Input() nombre: string="";
+@Input() apellido: string="";
+@Input() matricula: string="";
+
+agregarAlumno(): void {
+  // eslint-disable-next-line no-var
+  var nuevoAlumno: any ={
+    nombre: this.nombre,
+    apellido: this.apellido,
+    matricula: this.matricula
+  };
+  this.alumnos.push(nuevoAlumno);
+  console.log(this.alumnos);
+}
   constructor() {}
 
 }
