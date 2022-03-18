@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Detalles alumnos
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,7 @@
   </ion-header>
 
   <ion-list>
-    <ion-item *ngFor="let alumno of alumnos " routerLink="/alumno-detalle">
+    <ion-item *ngFor="let alumno of alumnos " [routerLink]="['/alumno-detalle',alumno.matricula]">
       <ion-img src="assets/imagenes/fcfm.png" alt="" width="70" height="70"></ion-img>
       <ion-label>{{alumno.nombre}}</ion-label>
     </ion-item>

@@ -41,32 +41,32 @@ alumnos=[
 {
   nombre:"Armando",
   apellido:"Villanueva",
-  matricula:"555"
+  matricula:"666"
 },
 {
   nombre:"Luis",
   apellido:"Tamez",
-  matricula:"555"
+  matricula:"777"
 },
 {
   nombre:"Manuel",
   apellido:"Juarez",
-  matricula:"555"
+  matricula:"888"
 },
 {
   nombre:"Rogel",
   apellido:"Axel",
-  matricula:"555"
+  matricula:"999"
 },
 {
   nombre:"Sergio",
   apellido:"Gutierrez",
-  matricula:"555"
+  matricula:"000"
 },
 {
   nombre:"Omar",
   apellido:"Garza",
-  matricula:"555"
+  matricula:"1110"
 },
 ];
 @Input() nombre: string="";
