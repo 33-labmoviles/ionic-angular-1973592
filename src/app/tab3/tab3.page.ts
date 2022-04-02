@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  nombre:string="";
+  apellido: string="";
+  matricula: string="";
+  constructor(
+    private http: HttpClient) {}
+  onSubmit(agregarAlumno:NgForm){
+    console.log("hola");
+  }
 
 }

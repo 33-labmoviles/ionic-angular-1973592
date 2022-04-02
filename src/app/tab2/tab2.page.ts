@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component,OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  alumnos=[
+  /*alumnos=[
     {
       nombre:'Abraham',
       apellido:'Ramirez',
@@ -64,6 +64,17 @@ export class Tab2Page {
       matricula:'1110'
     },
     ];
-  constructor() {}
+    */
+  constructor(private http: HttpClient	) {}
 
+  ngOnInit():void{
+    this.getAlumnos();
+  }
+  alumnos: any=[];
+
+  getAlumnos(){
+    return this.http.get('https://alumnos-6002d-default-rtdb.firebaseio.com/alumnos.json').subscribe(res=>
+    this.alumnos=res
+    )}
 }
+
