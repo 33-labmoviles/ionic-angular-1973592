@@ -13,5 +13,31 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <form #agregarAlumno="ngForm"(ngSubmit)="onSubmit(agregarAlumno)">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        Nombre:
+      </ion-col>
+      <ion-col size="11">
+        <ion-input placeholder="Emiliano"[(ngModel)]="nombre" name="nombre"></ion-input>
+      </ion-col>
+      <ion-col size="1">
+        Apellido:
+      </ion-col>
+      <ion-col size="11">
+        <ion-input placeholder="Rodriguez" [(ngModel)]="apellido" name="apellido"></ion-input>
+      </ion-col>
+      <ion-col size="1">
+        Matricula:
+      </ion-col>
+      <ion-col size="11">
+        <ion-input placeholder="1111" [(ngModel)]="matricula" name="matricula"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button>Agregar alumno</ion-button>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>

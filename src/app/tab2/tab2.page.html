@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Detalles alumnos
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,24 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let alumno of alumnos ">
+    <ion-item [routerLink]="['/alumno-detalle',alumno.matricula]">
+
+      <ion-item-options side="start">
+        <ion-item-option (click)="favorite(item)" color="success"><ion-icon slot="icon-only" name="heart"></ion-icon></ion-item-option>
+      </ion-item-options>
+
+      <ion-img src="assets/imagenes/fcfm.png" alt="" width="70" height="70"></ion-img>
+      <ion-label>{{alumno.nombre}}</ion-label>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)" color="danger"><ion-icon slot="icon-only" name="trash"></ion-icon></ion-item-option>
+      </ion-item-options>
+    </ion-item>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
+
