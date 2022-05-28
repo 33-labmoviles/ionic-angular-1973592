@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "alumnos-6002d"
+  },
+  "targets": {
+    "alumnos-6002d": {
+      "hosting": {
+        "app": [
+          "alumnos-6002d"
+        ]
+      }
+    }
+  }
+}

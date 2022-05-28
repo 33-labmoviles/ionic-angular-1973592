@@ -9,32 +9,31 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Alumnos</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-
-  <ion-grid>
-
-
-    <ion-row *ngFor="let alumno of alumnos">
-      <ion-col>
-      <ion-card>
-        <ion-card-content>
+  <div *ngFor="let alumno of alumnoslista">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+           <ion-col>
           <ion-row>
-          <ion-col>
-            <p>Nombre: {{alumno.nombre}}</p>
-            <p>Apellido: {{alumno.apellido}}</p>
-            <p>Matricula: {{alumno.matricula}}</p>
-          </ion-col>
-          <ion-col class="alinear">
-            <img src="assets/imagenes/fcfm.png" alt="" width="70" height="70" />
-          </ion-col>
+            <p>Nombre: </p>
+            <p><strong>{{alumno.nombre}}</strong></p>
+          </ion-row>
+          <ion-row>
+            <p>Apellido: </p>
+            <p><strong>{{alumno.apellido}}</strong></p>
+          </ion-row>
+          <ion-row>
+            <p>Matricula: </p>
+            <p><strong>{{alumno.matricula}}</strong></p>
         </ion-row>
-      </ion-card-content>
-      </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+            </ion-col>
+       <ion-col ><img src="assets/imagenes/fcfm.png" align ="right" alt="" width="70" height="70"  ></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </div>
 </ion-content>
